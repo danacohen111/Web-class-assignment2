@@ -12,11 +12,11 @@ const createUser = async (req, res) => {
 
 const updateUser = async (req, res) => {
     try {
-      const userId = req.params.id;
+      const { userId } = req.params;
       const { username, email, password } = req.body;
 
       if (!username && !email && !password) {
-        return res.status(400).send("At least one of title or content is required");
+        return res.status(400).send("At least one of username or email or password is required");
       }
   
       const updateFields = {};

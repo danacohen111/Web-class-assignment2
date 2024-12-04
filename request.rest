@@ -68,17 +68,17 @@ POST http://localhost:3000/users
 Content-Type: application/json
 
 {
-    "username": "Ilana2",
-    "email": "ilana2@gmail.com",
-    "password": "ilana123"
+    "username": "Ilana",
+    "email": "ilana@gmail.com",
+    "password": "ilana"
 }
 
 ###
 
-PUT http://localhost:3000/users/67471fa41368898cd3f6ca0e
+PUT http://localhost:3000/users/67507f6df8656133a81c750a
 Content-Type: application/json
 
 {
-    "email": "new@gmail.com",
+    "email": "new@gmail.com"
 }
 
