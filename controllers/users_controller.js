@@ -49,8 +49,28 @@ const getAllUsers = async (req, res) => {
     }
 };
 
+
+const deleteUser = async (req, res) => {
+    const userId = req.params.id;
+  
+    try {
+      const user = await UserModel.findById(userId);
+  
+      if (!user) {
+        return res.status(404).send("User not found");
+      }
+  
+      await user.deleteOne();
+  
+      res.send("User deleted successfully");
+    } catch (error) {
+      res.status(400).send(error.message);
+    }
+  };
+
 module.exports = {
     createUser,
     updateUser,
-    getAllUsers
+    getAllUsers,
+    deleteUser
 };
