@@ -40,7 +40,17 @@ const updateUser = async (req, res) => {
     }
 };
 
+const getAllUsers = async (req, res) => {
+    try {
+      const users = await UserModel.find();
+      res.status(200).send(users);
+    } catch (error) {
+      res.status(400).send(error.message);
+    }
+};
+
 module.exports = {
     createUser,
-    updateUser
+    updateUser,
+    getAllUsers
 };

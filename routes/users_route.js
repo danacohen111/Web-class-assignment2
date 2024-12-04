@@ -6,4 +6,6 @@ router.post("/", usersController.createUser);
 
 router.put("/:userId", usersController.updateUser);
 
+router.get("/", usersController.getAllUsers);
+
 module.exports = router;

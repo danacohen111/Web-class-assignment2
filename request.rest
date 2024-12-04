@@ -82,3 +82,6 @@ Content-Type: application/json
     "email": "new@gmail.com"
 }
 
+###
+
+GET http://localhost:3000/users
