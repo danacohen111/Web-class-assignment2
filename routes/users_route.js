@@ -4,4 +4,6 @@ const usersController = require("../controllers/users_controller");
 
 router.post("/", usersController.createUser);
 
+router.put("/:userId", usersController.updateUser);
+
 module.exports = router;
